@@ -12,8 +12,8 @@ This endpoint allows you to get free cakes.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="name" type="string" required=true %}
+asdasd
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="" type="string" required=false %}
