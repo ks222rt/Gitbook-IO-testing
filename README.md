@@ -186,13 +186,13 @@ Set organization wellKnownConfigUrl
 {% api-method-request %}
 {% endapi-method-spec %}
 {% endapi-method %}
-{% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setWhitelistCallbackUrls" %}  
+{% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.unblock" %}  
 {% api-method-summary %}  
-/organizations.setWhitelistCallbackUrls  
+/organizations.unblock  
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Set organization whitelist callback urls
+Unblock org by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
