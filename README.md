@@ -25,6 +25,7 @@ Organization id
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "id": "Organization id",
@@ -60,6 +61,7 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -68,11 +70,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.list" %}
 {% api-method-summary %}
@@ -91,6 +95,7 @@ List organizations
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 undefined
 ```
@@ -99,6 +104,7 @@ undefined
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -107,11 +113,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.listGroupToRoleMappings" %}
 {% api-method-summary %}
@@ -136,6 +144,7 @@ Organization id
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 undefined
 ```
@@ -144,6 +153,7 @@ undefined
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -152,11 +162,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.block" %}
 {% api-method-summary %}
@@ -181,6 +193,7 @@ Organization id
 {% api-method-response-example-description %}
 No Content
 {% endapi-method-response-example-description %}
+
 ```javascript
 ""
 ```
@@ -189,6 +202,7 @@ No Content
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -197,11 +211,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.create" %}
 {% api-method-summary %}
@@ -244,6 +260,7 @@ undefined
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "id": "Organization id",
@@ -277,6 +294,7 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -285,11 +303,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.delete" %}
 {% api-method-summary %}
@@ -314,6 +334,7 @@ Organization id
 {% api-method-response-example-description %}
 No Content
 {% endapi-method-response-example-description %}
+
 ```javascript
 ""
 ```
@@ -322,6 +343,7 @@ No Content
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -330,11 +352,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.logout" %}
 {% api-method-summary %}
@@ -359,6 +383,7 @@ Organization id
 {% api-method-response-example-description %}
 No Content
 {% endapi-method-response-example-description %}
+
 ```javascript
 ""
 ```
@@ -367,6 +392,7 @@ No Content
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -375,11 +401,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setClientId" %}
 {% api-method-summary %}
@@ -407,6 +435,7 @@ OIDC client ID
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "clientId": {
@@ -419,6 +448,7 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -427,11 +457,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setClientSecret" %}
 {% api-method-summary %}
@@ -459,6 +491,7 @@ OIDC client secret
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "sanitizedClientSecret": {
@@ -471,6 +504,7 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -479,11 +513,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setName" %}
 {% api-method-summary %}
@@ -511,6 +547,7 @@ Organization name
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "name": {
@@ -523,6 +560,7 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -531,11 +569,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setOrgTokenGroupsAttribute" %}
 {% api-method-summary %}
@@ -563,6 +603,7 @@ Token groups attribute
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "orgTokenGroupsAttribute": {
@@ -575,6 +616,7 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -583,11 +625,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setResponseMode" %}
 {% api-method-summary %}
@@ -615,6 +659,7 @@ OIDC response mode
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "responseMode": {
@@ -627,6 +672,7 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -635,11 +681,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setScope" %}
 {% api-method-summary %}
@@ -667,6 +715,7 @@ OIDC scope
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "scope": {
@@ -679,6 +728,7 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -687,11 +737,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setWellKnownConfigUrl" %}
 {% api-method-summary %}
@@ -719,6 +771,7 @@ Organization well known config url
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "wellKnownConfigUrl": {
@@ -731,6 +784,7 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -739,11 +793,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setWhitelistCallbackUrls" %}
 {% api-method-summary %}
@@ -771,6 +827,7 @@ Callback whitelist URL
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "whitelistCallbackUrls": {
@@ -783,6 +840,7 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -791,11 +849,13 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.unblock" %}
 {% api-method-summary %}
@@ -820,6 +880,7 @@ Organization id
 {% api-method-response-example-description %}
 No Content
 {% endapi-method-response-example-description %}
+
 ```javascript
 ""
 ```
@@ -828,6 +889,7 @@ No Content
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -836,10 +898,12 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+
 {% endapi-method-spec %}
 {% endapi-method %}
