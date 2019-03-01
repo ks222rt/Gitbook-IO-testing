@@ -13,7 +13,7 @@ Get organization by id
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -158,7 +158,7 @@ List group to service role mappings by organization id
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -215,7 +215,7 @@ Block org by id
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -264,7 +264,7 @@ Create org
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="name" type="string" required="true" %}
 Organization name
@@ -356,7 +356,7 @@ Delete org by id
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -405,7 +405,7 @@ Logout org by id
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -454,7 +454,7 @@ Set organization clientId
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -510,7 +510,7 @@ Update org client secret
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -566,7 +566,7 @@ Set organization name
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -622,7 +622,7 @@ Set organization orgTokenGroupsAttribute
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -678,7 +678,7 @@ Set organization responseMode
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -734,7 +734,7 @@ Set organization scope
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -790,7 +790,7 @@ Set organization wellKnownConfigUrl
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -846,7 +846,7 @@ Set organization whitelist callback urls
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -902,7 +902,7 @@ Unblock org by id
 
 {% api-method-spec %}
 
-        {% api-method-request %}
+{% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
