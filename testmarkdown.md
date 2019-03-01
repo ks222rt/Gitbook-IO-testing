@@ -1,13 +1,3 @@
-# TestMarkdown
-
-* [ExpressMiddleware](testmarkdown.md#ExpressMiddleware)
-  * [ServiceAuthorizationMiddleware](testmarkdown.md#ServiceAuthorizationMiddleware)
-    * * [authorize\(authParams\)](testmarkdown.md#authorize)
-    * * [errorHandler\(\[err\], req, res, next\)](testmarkdown.md#errorHandler)
-  * [FullAuthorizationParameters](testmarkdown.md#FullAuthorizationParameters)
-  * [AccessRule](testmarkdown.md#AccessRule)
-  * [AuthorizationMode](testmarkdown.md#AuthorizationMode)
-
 ## ExpressMiddleware <a id="ExpressMiddleware"></a>
 
 ### ServiceAuthorizationMiddleware <a id="ServiceAuthorizationMiddleware"></a>
