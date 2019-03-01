@@ -1,6 +1,19 @@
 # Initial page
 
-{% api-method 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 %}
+{% api-method method=get host=https://admin-api.infomaker.io path=/v1/organizations.get %}
+{% api-method-summary %}
+/organizations.get
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Get organization by id
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+    
+{% endapi-method-spec %} 
+{% endapi-method %}
 
 {% api-method method="get" host="" path="" %}
 {% api-method-summary %}
