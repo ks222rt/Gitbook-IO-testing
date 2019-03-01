@@ -1,8 +1,8 @@
 
 # organizations
 
-{% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.get" %}  
-{% api-method-summary %}  
+{% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.get" %}
+{% api-method-summary %}
 /organizations.get  
 {% endapi-method-summary %}
 
@@ -15,8 +15,9 @@ Get organization by id
 {% endapi-method-spec %}
 {% endapi-method %}
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.list" %}  
-{% api-method-summary %}  
-/organizations.list  
+
+{% api-method-summary %}
+/organizations.list
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -27,9 +28,11 @@ List organizations
 {% api-method-request %}
 {% endapi-method-spec %}
 {% endapi-method %}
-{% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.listGroupToRoleMappings" %}  
-{% api-method-summary %}  
-/organizations.listGroupToRoleMappings  
+
+{% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.listGroupToRoleMappings" %}
+
+{% api-method-summary %}
+/organizations.listGroupToRoleMappings
 {% endapi-method-summary %}
 
 {% api-method-description %}
