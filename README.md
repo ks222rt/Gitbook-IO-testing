@@ -25,7 +25,6 @@ Organization id
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "id": "Organization id",
@@ -61,7 +60,6 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -70,7 +68,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -94,7 +91,6 @@ List organizations
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 undefined
 ```
@@ -103,7 +99,6 @@ undefined
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -112,7 +107,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -142,7 +136,6 @@ Organization id
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 undefined
 ```
@@ -151,7 +144,6 @@ undefined
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -160,7 +152,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -190,7 +181,6 @@ Organization id
 {% api-method-response-example-description %}
 No Content
 {% endapi-method-response-example-description %}
-
 ```javascript
 ""
 ```
@@ -199,7 +189,6 @@ No Content
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -208,7 +197,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -256,7 +244,6 @@ undefined
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "id": "Organization id",
@@ -290,7 +277,6 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -299,7 +285,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -329,7 +314,6 @@ Organization id
 {% api-method-response-example-description %}
 No Content
 {% endapi-method-response-example-description %}
-
 ```javascript
 ""
 ```
@@ -338,7 +322,6 @@ No Content
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -347,7 +330,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -377,7 +359,6 @@ Organization id
 {% api-method-response-example-description %}
 No Content
 {% endapi-method-response-example-description %}
-
 ```javascript
 ""
 ```
@@ -386,7 +367,6 @@ No Content
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -395,7 +375,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -428,7 +407,6 @@ OIDC client ID
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "clientId": {
@@ -441,7 +419,6 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -450,7 +427,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -483,7 +459,6 @@ OIDC client secret
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "sanitizedClientSecret": {
@@ -496,7 +471,6 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -505,7 +479,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -538,7 +511,6 @@ Organization name
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "name": {
@@ -551,7 +523,6 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -560,7 +531,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -593,7 +563,6 @@ Token groups attribute
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "orgTokenGroupsAttribute": {
@@ -606,7 +575,6 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -615,7 +583,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -648,7 +615,6 @@ OIDC response mode
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "responseMode": {
@@ -661,7 +627,6 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -670,7 +635,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -703,7 +667,6 @@ OIDC scope
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "scope": {
@@ -716,7 +679,6 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -725,7 +687,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -758,7 +719,6 @@ Organization well known config url
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "wellKnownConfigUrl": {
@@ -771,7 +731,6 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -780,7 +739,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -813,7 +771,6 @@ Callback whitelist URL
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "whitelistCallbackUrls": {
@@ -826,7 +783,6 @@ Successful
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -835,7 +791,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -865,7 +820,6 @@ Organization id
 {% api-method-response-example-description %}
 No Content
 {% endapi-method-response-example-description %}
-
 ```javascript
 ""
 ```
@@ -874,7 +828,6 @@ No Content
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
@@ -883,7 +836,6 @@ Bad Request
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
