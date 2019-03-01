@@ -1,6 +1,4 @@
-
-# imsg-service
-
+# IMSG
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="//imsg-service/v1/callback" %}
 {% api-method-summary %}
@@ -12,22 +10,24 @@ Callback from IMAS login
 {% endapi-method-description %}
 
 {% api-method-spec %}
-
 {% api-method-request %}
 {% api-method-query-parameters %}
-{% api-method-parameter name="imid_token" type="string" required="undefined" %}
+{% api-method-parameter name="imid\_token" type="string" required="undefined" %}
 IM ID JWT
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="serviceCallback" type="string" required="undefined" %}
 Where to redirect client after login
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
+
 {% api-method-response %}
 {% api-method-response-example httpCode=302 %}
 {% api-method-response-example-description %}
 Found
 {% endapi-method-response-example-description %}
+
 ```javascript
 "Redirected to the service callback url"
 ```
@@ -35,7 +35,6 @@ Found
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="//imsg-service/v1/health" %}
 {% api-method-summary %}
@@ -47,12 +46,20 @@ Health status
 {% endapi-method-description %}
 
 {% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "inGrace": false,
@@ -60,10 +67,12 @@ Successful
 }
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "inGrace": false,
@@ -75,7 +84,6 @@ Internal Server Error
 {% endapi-method-spec %}
 {% endapi-method %}
 
-
 {% api-method method="get" host="https://admin-api.infomaker.io" path="//imsg-service/v1/token-is-set" %}
 {% api-method-summary %}
 /imsg-service/v1/token-is-set
@@ -86,22 +94,32 @@ Check if request contains IMID token
 {% endapi-method-description %}
 
 {% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "msg": "ok"
 }
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
 Unauthorized
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.auth.MissingToken"
 ```
@@ -109,7 +127,6 @@ Unauthorized
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="//imsg-service/v1/org/{org}/login" %}
 {% api-method-summary %}
@@ -121,7 +138,6 @@ Trigger login flow
 {% endapi-method-description %}
 
 {% api-method-spec %}
-
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="callback" type="string" required="true" %}
@@ -129,11 +145,13 @@ Where to redirect client after login
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
+
 {% api-method-response %}
 {% api-method-response-example httpCode=302 %}
 {% api-method-response-example-description %}
 Found
 {% endapi-method-response-example-description %}
+
 ```javascript
 "Redirected after login"
 ```
@@ -141,7 +159,6 @@ Found
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="//imsg-service/v1/logout" %}
 {% api-method-summary %}
@@ -153,7 +170,6 @@ Log out
 {% endapi-method-description %}
 
 {% api-method-spec %}
-
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="callback" type="string" required="undefined" %}
@@ -161,11 +177,13 @@ Where to redirect client after logout
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
+
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "msg": "You are logged out"
@@ -175,7 +193,6 @@ Successful
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="//imsg-service/v1/unit" %}
 {% api-method-summary %}
@@ -187,7 +204,6 @@ Set preferred unit
 {% endapi-method-description %}
 
 {% api-method-spec %}
-
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="unit" type="string" required="null" %}
@@ -201,16 +217,19 @@ Preferred unit
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "msg": "Unit set"
 }
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
 Forbidden
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.auth.Forbidden"
 ```
@@ -218,3 +237,4 @@ Forbidden
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
