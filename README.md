@@ -20,17 +20,59 @@ Organization id
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Successful
+{% endapi-method-response-example-description %}
+```javascript
+{
+  "id": "Organization id",
+  "name": {
+    "value": "infomaker"
+  },
+  "wellKnownConfigUrl": {
+    "value": "http://example.com/.well-known.json"
+  },
+  "scope": {
+    "value": "openid profile email"
+  },
+  "clientId": {
+    "value": "foobarbaz"
+  },
+  "responseMode": {
+    "value": "query"
+  },
+  "validatorsTokenGroupsAttribute": {
+    "value": "Groups"
+  },
+  "sanitizedClientSecret": {
+    "value": "foobarbaz"
+  },
+  "whitelistCallbackUrls": {
+    "value": "infomaker.io"
+  },
+  "blocked": false
+}
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.list" %}
 {% api-method-summary %}
@@ -44,17 +86,32 @@ List organizations
 {% api-method-spec %}
 {% api-method-request %}
 
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Successful
+{% endapi-method-response-example-description %}
+```javascript
+undefined
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.listGroupToRoleMappings" %}
 {% api-method-summary %}
@@ -74,17 +131,32 @@ Organization id
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Successful
+{% endapi-method-response-example-description %}
+```javascript
+undefined
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.block" %}
 {% api-method-summary %}
@@ -104,17 +176,32 @@ Organization id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=204 %}
+{% api-method-response-example-description %}
+No Content
+{% endapi-method-response-example-description %}
+```javascript
+""
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.create" %}
 {% api-method-summary %}
@@ -152,17 +239,57 @@ undefined
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Successful
+{% endapi-method-response-example-description %}
+```javascript
+{
+  "id": "Organization id",
+  "name": {
+    "value": "infomaker"
+  },
+  "wellKnownConfigUrl": {
+    "value": "http://example.com/.well-known.json"
+  },
+  "scope": {
+    "value": "openid profile email"
+  },
+  "clientId": {
+    "value": "foobarbaz"
+  },
+  "responseMode": {
+    "value": "query"
+  },
+  "orgTokenGroupsAttribute": {
+    "value": "Groups"
+  },
+  "whitelistCallbackUrls": {
+    "value": "infomaker.io"
+  },
+  "sanitizedClientSecret": "null",
+  "blocked": false
+}
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.delete" %}
 {% api-method-summary %}
@@ -182,17 +309,32 @@ Organization id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=204 %}
+{% api-method-response-example-description %}
+No Content
+{% endapi-method-response-example-description %}
+```javascript
+""
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.logout" %}
 {% api-method-summary %}
@@ -212,17 +354,32 @@ Organization id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=204 %}
+{% api-method-response-example-description %}
+No Content
+{% endapi-method-response-example-description %}
+```javascript
+""
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setClientId" %}
 {% api-method-summary %}
@@ -245,17 +402,36 @@ OIDC client ID
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Successful
+{% endapi-method-response-example-description %}
+```javascript
+{
+  "clientId": {
+    "value": "foobarbaz"
+  }
+}
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setClientSecret" %}
 {% api-method-summary %}
@@ -278,17 +454,36 @@ OIDC client secret
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Successful
+{% endapi-method-response-example-description %}
+```javascript
+{
+  "sanitizedClientSecret": {
+    "value": "foobarbaz"
+  }
+}
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setName" %}
 {% api-method-summary %}
@@ -311,17 +506,36 @@ Organization name
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Successful
+{% endapi-method-response-example-description %}
+```javascript
+{
+  "name": {
+    "value": "infomaker"
+  }
+}
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setOrgTokenGroupsAttribute" %}
 {% api-method-summary %}
@@ -344,17 +558,36 @@ Token groups attribute
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Successful
+{% endapi-method-response-example-description %}
+```javascript
+{
+  "orgTokenGroupsAttribute": {
+    "value": "Groups"
+  }
+}
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setResponseMode" %}
 {% api-method-summary %}
@@ -377,17 +610,36 @@ OIDC response mode
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Successful
+{% endapi-method-response-example-description %}
+```javascript
+{
+  "responseMode": {
+    "value": "query"
+  }
+}
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setScope" %}
 {% api-method-summary %}
@@ -410,17 +662,36 @@ OIDC scope
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Successful
+{% endapi-method-response-example-description %}
+```javascript
+{
+  "scope": {
+    "value": "openid profile email"
+  }
+}
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setWellKnownConfigUrl" %}
 {% api-method-summary %}
@@ -443,17 +714,36 @@ Organization well known config url
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Successful
+{% endapi-method-response-example-description %}
+```javascript
+{
+  "wellKnownConfigUrl": {
+    "value": "http://example.com/.well-known.json"
+  }
+}
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setWhitelistCallbackUrls" %}
 {% api-method-summary %}
@@ -476,17 +766,36 @@ Callback whitelist URL
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Successful
+{% endapi-method-response-example-description %}
+```javascript
+{
+  "whitelistCallbackUrls": {
+    "value": "infomaker.io"
+  }
+}
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.unblock" %}
 {% api-method-summary %}
@@ -506,13 +815,30 @@ Organization id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
-{% api-method-response-example httpCode="500" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=204 %}
+{% api-method-response-example-description %}
+No Content
+{% endapi-method-response-example-description %}
+```javascript
+""
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Bad Request
+{% endapi-method-response-example-description %}
+```javascript
+"errors.api.BadRequestError"
+```
+{% endapi-method-response-example %}
+{% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
-'''javascript
+```javascript
 "errors.api.InternalServerError"
-'''
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
