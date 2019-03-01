@@ -2,26 +2,11 @@
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.get" %}
 {% api-method-summary %}
-hejsan
+/organizations.get
 {% endapi-method-summary %}
 
 {% api-method-description %}
 Get organization by id
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-    
-{% endapi-method-spec %} 
-{% endapi-method %}
-
-{% api-method method="get" host="" path="" %}
-{% api-method-summary %}
-hejsan
-{% endapi-method-summary %}
-
-{% api-method-description %}
-Hejsan svejsan
 {% endapi-method-description %}
 
 {% api-method-spec %}
