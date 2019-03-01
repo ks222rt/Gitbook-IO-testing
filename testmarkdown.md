@@ -19,7 +19,7 @@ Extract and authorize token using the provided auth params
 | :--- | :--- | :--- |
 | authParams | `FullAuthorizationParameters` \| `AuthorizationMode` | **Required** - Authorization parameters to pass to |
 
-#### errorHandler\(\[err\], req, res, next\) <a id="errorHandler"></a>
+#### errorHandler\(\[err\], req, res, next\) 
 
 Error handler for errors thrown by ServiceAuthorizationMiddleware
 
