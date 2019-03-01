@@ -1,6 +1,4 @@
-
-# organizations
-
+# Initial page
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.get" %}
 {% api-method-summary %}
@@ -13,34 +11,32 @@ Get organization by id
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-query-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.list" %}
-{% api-method-summary %}
-/organizations.list
-{% endapi-method-summary %}
-
-{% api-method-description %}
-List organizations
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-
-{% endapi-method-spec %}
-{% endapi-method %}
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.listGroupToRoleMappings" %}
 {% api-method-summary %}
-/organizations.listGroupToRoleMappings
+
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -49,13 +45,24 @@ List group to service role mappings by organization id
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-query-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -70,13 +77,24 @@ Block org by id
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -91,31 +109,48 @@ Create org
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="name" type="string" required="true" %}
 Organization name
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="wellKnownConfigUrl" type="string" required="true" %}
 undefined
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="scope" type="string" required="true" %}
 OIDC scope
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="clientId" type="string" required="true" %}
 OIDC client ID
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="responseMode" type="string" required="true" %}
 OIDC response mode
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="orgTokenGroupsAttribute" type="string" required="true" %}
 Token groups attribute
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="whitelistCallbackUrls" type="string" required="true" %}
 undefined
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -130,13 +165,24 @@ Delete org by id
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -151,13 +197,24 @@ Logout org by id
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -172,16 +229,28 @@ Set organization clientId
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="clientId" type="string" required="true" %}
 OIDC client ID
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -196,16 +265,28 @@ Update org client secret
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="clientSecret" type="string" required="true" %}
 OIDC client secret
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -220,16 +301,28 @@ Set organization name
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="name" type="string" required="true" %}
 Organization name
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -244,16 +337,28 @@ Set organization orgTokenGroupsAttribute
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="orgTokenGroupsAttribute" type="string" required="true" %}
 Token groups attribute
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -268,16 +373,28 @@ Set organization responseMode
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="responseMode" type="string" required="true" %}
 OIDC response mode
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -292,16 +409,28 @@ Set organization scope
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="scope" type="string" required="true" %}
 OIDC scope
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -316,16 +445,28 @@ Set organization wellKnownConfigUrl
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="wellKnownConfigUrl" type="string" required="true" %}
 Organization well known config url
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -340,16 +481,28 @@ Set organization whitelist callback urls
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="whitelistCallbackUrls" type="string" required="true" %}
 Callback whitelist URL
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
@@ -364,12 +517,24 @@ Unblock org by id
 
 {% api-method-spec %}
 {% api-method-request %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
