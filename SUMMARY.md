@@ -1,13 +1,15 @@
 # Table of contents
 
 * [Health](README.md)
-* [Organisation](gief-me.md)
-* [Permissions](untitled-1.md)
-* [Roles](untitled-2.md)
-* [Services](untitled-4.md)
-* [Subjects](untitled-3.md)
-* [Units](untitled.md)
 * [IMSG](imsg.md)
-* [TestMarkdown](testmarkdown.md)
 * [NewMarkdown](newmarkdown.md)
+* [TestMarkdown](testmarkdown.md)
+* [Services](services/README.md)
+  * [Admin API](services/admin-api/README.md)
+    * [Roles](services/admin-api/untitled-2.md)
+    * [Services](services/admin-api/untitled-4.md)
+    * [Subjects](services/admin-api/untitled-3.md)
+    * [Units](services/admin-api/untitled.md)
+    * [Permissions](services/admin-api/untitled-1.md)
+    * [Organisation](services/admin-api/gief-me.md)
 
