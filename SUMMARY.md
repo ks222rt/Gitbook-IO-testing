@@ -1,10 +1,10 @@
 # Table of contents
 
-* [Initial page](README.md)
-* [Gief me](gief-me.md)
-* [Untitled](untitled.md)
-* [Untitled](untitled-1.md)
-* [Untitled](untitled-2.md)
-* [Untitled](untitled-3.md)
-* [Untitled](untitled-4.md)
+* [Health](README.md)
+* [Organisation](gief-me.md)
+* [Permissions](untitled.md)
+* [Roles](untitled-1.md)
+* [Services](untitled-2.md)
+* [Subjects](untitled-3.md)
+* [Units](untitled-4.md)
 
