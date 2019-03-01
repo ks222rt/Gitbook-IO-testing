@@ -3,7 +3,7 @@
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.get" %}
 {% api-method-summary %}
-/organizations.get  
+/organizations.get  asd
 {% endapi-method-summary %}
 
 {% api-method-description %}
