@@ -13,6 +13,7 @@ Get organization by id
 
 {% api-method-spec %}
 
+        {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -86,7 +87,6 @@ List organizations
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -128,8 +128,8 @@ List group to service role mappings by organization id
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -176,8 +176,8 @@ Block org by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -225,8 +225,8 @@ Create org
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="name" type="string" required="true" %}
 Organization name
@@ -317,8 +317,8 @@ Delete org by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -366,8 +366,8 @@ Logout org by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -415,8 +415,8 @@ Set organization clientId
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -471,8 +471,8 @@ Update org client secret
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -527,8 +527,8 @@ Set organization name
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -583,8 +583,8 @@ Set organization orgTokenGroupsAttribute
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -639,8 +639,8 @@ Set organization responseMode
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -695,8 +695,8 @@ Set organization scope
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -751,8 +751,8 @@ Set organization wellKnownConfigUrl
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -807,8 +807,8 @@ Set organization whitelist callback urls
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
@@ -863,8 +863,8 @@ Unblock org by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
+        {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
 Organization id
