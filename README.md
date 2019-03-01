@@ -73,6 +73,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.list" %}
 {% api-method-summary %}
@@ -112,6 +115,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/organizations.listGroupToRoleMappings" %}
 {% api-method-summary %}
@@ -157,6 +163,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.block" %}
 {% api-method-summary %}
@@ -203,6 +212,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.create" %}
 {% api-method-summary %}
@@ -292,6 +304,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.delete" %}
 {% api-method-summary %}
@@ -338,6 +353,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.logout" %}
 {% api-method-summary %}
@@ -384,6 +402,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setClientId" %}
 {% api-method-summary %}
@@ -437,6 +458,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setClientSecret" %}
 {% api-method-summary %}
@@ -490,6 +514,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setName" %}
 {% api-method-summary %}
@@ -543,6 +570,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setOrgTokenGroupsAttribute" %}
 {% api-method-summary %}
@@ -596,6 +626,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setResponseMode" %}
 {% api-method-summary %}
@@ -649,6 +682,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setScope" %}
 {% api-method-summary %}
@@ -702,6 +738,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setWellKnownConfigUrl" %}
 {% api-method-summary %}
@@ -755,6 +794,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.setWhitelistCallbackUrls" %}
 {% api-method-summary %}
@@ -808,6 +850,9 @@ Internal Server Error
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/organizations.unblock" %}
 {% api-method-summary %}
