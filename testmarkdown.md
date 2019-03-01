@@ -32,7 +32,7 @@ Will handle telling IMSG to redirect unauthorized requests, but will pass on any
 | res | `Object` | **Required** - Express res |
 | next | `function` | **Required** - Express next |
 
-### FullAuthorizationParameters - Typedef definition <a id="FullAuthorizationParameters"></a>
+#### FullAuthorizationParameters - Typedef definition <a id="FullAuthorizationParameters"></a>
 
 The type definition of the full auhtorization object with all parameters.  
 Passed to the authorize function.
@@ -46,7 +46,7 @@ Passed to the authorize function.
 | accessRules | `Array.<AccessRule>` | Optional access rules to authorize against |
 | suppressLoginTrigger | `Boolean` | If true, do not redirect failed authorization to login |
 
-### AccessRule - Typedef definition <a id="AccessRule"></a>
+#### AccessRule - Typedef definition <a id="AccessRule"></a>
 
 The type definition of the access rule.  
 Passed to the authorize function within the  object as a list of access rules.
@@ -61,7 +61,7 @@ All properties are optional, but at least one must exist
 | permission | `string` \| `function` | Permission that should match token |
 | sub | `string` \| `function` | Subject that should match token |
 
-### AuthorizationMode - Typedef definition <a id="AuthorizationMode"></a>
+#### AuthorizationMode - Typedef definition <a id="AuthorizationMode"></a>
 
 Type defintion of the authorization mode.  
 SERVICE\_ADMIN\_ENDPOINT - Authorization validates if you are a service admin and have a valid token. Either accessed or thrown out.  
