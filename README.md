@@ -92,6 +92,25 @@ Create org
 {% api-method-spec %}
 {% api-method-request %}
 
+{% api-method-body-parameters %}
+{% api-method-parameter name="name" type="string" required="true" %}
+Organization name
+{% endapi-method-parameter %}
+{% api-method-parameter name="wellKnownConfigUrl" type="string" required="true" %}
+undefined
+{% endapi-method-parameter %}
+{% api-method-parameter name="scope" type="string" required="true" %}
+OIDC scope
+{% endapi-method-parameter %}
+{% api-method-parameter name="clientId" type="string" required="true" %}
+OIDC client ID
+{% endapi-method-parameter %}
+{% api-method-parameter name="responseMode" type="string" required="true" %}
+OIDC response mode
+{% endapi-method-parameter %}
+{% api-method-parameter name="orgTokenGroupsAttribute" type="string" required="true" %}
+Token groups attribute
+{% endapi-method-parameter %}
 {% api-method-parameter name="whitelistCallbackUrls" type="string" required="true" %}
 undefined
 {% endapi-method-parameter %}
@@ -154,6 +173,10 @@ Set organization clientId
 {% api-method-spec %}
 {% api-method-request %}
 
+{% api-method-body-parameters %}
+{% api-method-parameter name="organizationId" type="string" required="true" %}
+Organization id
+{% endapi-method-parameter %}
 {% api-method-parameter name="clientId" type="string" required="true" %}
 OIDC client ID
 {% endapi-method-parameter %}
@@ -174,6 +197,10 @@ Update org client secret
 {% api-method-spec %}
 {% api-method-request %}
 
+{% api-method-body-parameters %}
+{% api-method-parameter name="organizationId" type="string" required="true" %}
+Organization id
+{% endapi-method-parameter %}
 {% api-method-parameter name="clientSecret" type="string" required="true" %}
 OIDC client secret
 {% endapi-method-parameter %}
@@ -194,6 +221,10 @@ Set organization name
 {% api-method-spec %}
 {% api-method-request %}
 
+{% api-method-body-parameters %}
+{% api-method-parameter name="organizationId" type="string" required="true" %}
+Organization id
+{% endapi-method-parameter %}
 {% api-method-parameter name="name" type="string" required="true" %}
 Organization name
 {% endapi-method-parameter %}
@@ -214,6 +245,10 @@ Set organization orgTokenGroupsAttribute
 {% api-method-spec %}
 {% api-method-request %}
 
+{% api-method-body-parameters %}
+{% api-method-parameter name="organizationId" type="string" required="true" %}
+Organization id
+{% endapi-method-parameter %}
 {% api-method-parameter name="orgTokenGroupsAttribute" type="string" required="true" %}
 Token groups attribute
 {% endapi-method-parameter %}
@@ -234,6 +269,10 @@ Set organization responseMode
 {% api-method-spec %}
 {% api-method-request %}
 
+{% api-method-body-parameters %}
+{% api-method-parameter name="organizationId" type="string" required="true" %}
+Organization id
+{% endapi-method-parameter %}
 {% api-method-parameter name="responseMode" type="string" required="true" %}
 OIDC response mode
 {% endapi-method-parameter %}
@@ -254,6 +293,10 @@ Set organization scope
 {% api-method-spec %}
 {% api-method-request %}
 
+{% api-method-body-parameters %}
+{% api-method-parameter name="organizationId" type="string" required="true" %}
+Organization id
+{% endapi-method-parameter %}
 {% api-method-parameter name="scope" type="string" required="true" %}
 OIDC scope
 {% endapi-method-parameter %}
@@ -274,6 +317,10 @@ Set organization wellKnownConfigUrl
 {% api-method-spec %}
 {% api-method-request %}
 
+{% api-method-body-parameters %}
+{% api-method-parameter name="organizationId" type="string" required="true" %}
+Organization id
+{% endapi-method-parameter %}
 {% api-method-parameter name="wellKnownConfigUrl" type="string" required="true" %}
 Organization well known config url
 {% endapi-method-parameter %}
@@ -294,6 +341,10 @@ Set organization whitelist callback urls
 {% api-method-spec %}
 {% api-method-request %}
 
+{% api-method-body-parameters %}
+{% api-method-parameter name="organizationId" type="string" required="true" %}
+Organization id
+{% endapi-method-parameter %}
 {% api-method-parameter name="whitelistCallbackUrls" type="string" required="true" %}
 Callback whitelist URL
 {% endapi-method-parameter %}
