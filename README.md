@@ -12,7 +12,6 @@ Get organization by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="organizationId" type="string" required="true" %}
