@@ -94,7 +94,36 @@ List organizations
 Successful
 {% endapi-method-response-example-description %}
 ```javascript
-undefined
+[
+  {
+    "id": "Organization id",
+    "name": {
+      "value": "infomaker"
+    },
+    "wellKnownConfigUrl": {
+      "value": "http://example.com/.well-known.json"
+    },
+    "scope": {
+      "value": "openid profile email"
+    },
+    "clientId": {
+      "value": "foobarbaz"
+    },
+    "responseMode": {
+      "value": "query"
+    },
+    "orgTokenGroupsAttribute": {
+      "value": "Groups"
+    },
+    "sanitizedClientSecret": {
+      "value": "foobarbaz"
+    },
+    "whitelistCallbackUrls": {
+      "value": "infomaker.io"
+    },
+    "blocked": false
+  }
+]
 ```
 {% endapi-method-response-example %}
 {% api-method-response-example httpCode=400 %}
@@ -142,7 +171,16 @@ Organization id
 Successful
 {% endapi-method-response-example-description %}
 ```javascript
-undefined
+[
+  {
+    "roleId": "Role id",
+    "unitId": "Unit id",
+    "organizationId": "Organization id",
+    "group": {
+      "value": "Auth team"
+    }
+  }
+]
 ```
 {% endapi-method-response-example %}
 {% api-method-response-example httpCode=400 %}
