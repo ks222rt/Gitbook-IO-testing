@@ -7,7 +7,7 @@ Module with helper functions for the Tokens.
 
 Extracts and decodes a service token from a raw request
 
-**Returns**: <code>Object</code> - The service token  
+**Returns**: <code>Object</code> - serviceToken - The service token  
 
 | Param | Type |
 | --- | --- |
