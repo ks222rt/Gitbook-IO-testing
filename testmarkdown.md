@@ -1,109 +1,83 @@
-## TokenUtils{#TokenUtils}
-
-Module with helper functions for the Tokens.
+## ExpressMiddleware{#ExpressMiddleware}
 
 
-### extractServiceTokenFromRequest(request) {#extractServiceTokenFromRequest}⇒ <code>Object</code>
+### ServiceAuthorizationMiddleware{#ServiceAuthorizationMiddleware}
 
-Extracts and decodes a service token from a raw request
-
-**Returns**: <code>Object</code> - serviceToken - The service token  
-
-| Param | Type |
-| --- | --- |
-| request | <code>http.IncomingMessage</code> | 
+ServiceAuthorizationMiddleware
 
 
-### getSubject(request) {#getSubject}⇒ <code>String</code>
+#### new ServiceAuthorizationMiddleware(options) {#ServiceAuthorizationMiddleware}
 
-Get the subject from the service token
-
-**Returns**: <code>String</code> - organization - The subject identifier set on the service token  
-
-| Param | Type |
-| --- | --- |
-| request | <code>http.IncomingMessage</code> | 
-
-
-### getOrganization(request) {#getOrganization}⇒ <code>String</code>
-
-Get the subject's organization
-
-**Returns**: <code>String</code> - organization - The organization the subject belongs to  
-
-| Param | Type |
-| --- | --- |
-| request | <code>http.IncomingMessage</code> | 
-
-
-### getUnits(request) {#getUnits}⇒ <code>Array.&lt;String&gt;</code>
-
-Get the subject's mapped units
-
-**Returns**: <code>Array.&lt;String&gt;</code> - units - An array of all units the subject belongs to  
-
-| Param | Type |
-| --- | --- |
-| request | <code>http.IncomingMessage</code> | 
-
-
-### getSelectedUnit(request) {#getSelectedUnit}⇒ <code>null</code> \| <code>String</code>
-
-Get the subject's selected unit
-
-**Returns**: <code>null</code> \| <code>String</code> - unit - The subject's selected unit, null if no unit selected  
-
-| Param | Type |
-| --- | --- |
-| request | <code>http.IncomingMessage</code> | 
-
-
-### getOrgPermissions(request) {#getOrgPermissions}⇒ <code>Array.&lt;String&gt;</code>
-
-Get the subject's organization permissions
-
-Organization permissions are located under permissions.org
-
-**Returns**: <code>Array.&lt;String&gt;</code> - } permissions - The subject's org permissions  
-
-| Param | Type |
-| --- | --- |
-| request | <code>http.IncomingMessage</code> | 
-
-
-### getUnitPermissions(request, unit) {#getUnitPermissions}⇒ <code>Array.&lt;String&gt;</code>
-
-Get the subject's permissions for the specified unit
-
-Unit permissions are located under permissions.units[unit]
-
-**Returns**: <code>Array.&lt;String&gt;</code> - permissions - The subject's permissions for the specified unit  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| request | <code>http.IncomingMessage</code> | **Required** -  |
-| unit | <code>String</code> | **Required** - The unit permissions should be checked in |
+| options | <code>Object</code> | **Required** -  |
+| options.serviceTokenSignSecret | <code>string</code> | **Required** - Secret to validate token signature against |
 
 
-### isServiceAdmin(request) {#isServiceAdmin}⇒ <code>Boolean</code>
+#### authorize(authParams) {#authorize}
 
-Checks if a token belogs to an admin for the service
-
-**Returns**: <code>Boolean</code> - isServiceAdmin - True if the token belongs to an admin for the service  
-
-| Param | Type |
-| --- | --- |
-| request | <code>http.IncomingMessage</code> | 
+Extract and authorize token using the provided auth params
 
 
-### getUserinfo(request) {#getUserinfo}⇒ <code>Object</code>
+| Param | Type | Description |
+| --- | --- | --- |
+| authParams | <code>FullAuthorizationParameters</code> &#124; <code>AuthorizationMode</code> | **Required** - Authorization parameters to pass to |
 
-Get the subject's userinfo
 
-**Returns**: <code>Object</code> - userinfo - The userinfo object set on the subject  
+#### errorHandler([err], req, res, next) {#errorHandler}
 
-| Param | Type |
-| --- | --- |
-| request | <code>http.IncomingMessage</code> | 
+Error handler for errors thrown by ServiceAuthorizationMiddleware
+
+Will handle telling IMSG to redirect unauthorized requests, but will pass on
+any other errors to next()
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| err | <code>Object</code> | Express err |
+| req | <code>Object</code> | **Required** - Express req |
+| res | <code>Object</code> | **Required** - Express res |
+| next | <code>function</code> | **Required** - Express next |
+
+
+### FullAuthorizationParameters{#FullAuthorizationParameters}: <code>Object</code>
+
+The type definition of the full auhtorization object with all parameters.  
+Passed to the authorize function.
+
+
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| onPreAuth | <code>function</code> | Function to run before authorize is called |
+| org | <code>string</code> &#124; <code>function</code> &#124; <code>Boolean</code> | **Required** - Organiztion to authorize against |
+| accessRules | <code>Array.&lt;AccessRule&gt;</code> | Optional access rules to authorize against |
+| suppressLoginTrigger | <code>Boolean</code> | If true, do not redirect failed authorization to login |
+
+### AccessRule{#AccessRule}: <code>Object</code>
+
+The type definition of the access rule.  
+Passed to the authorize function within the <FullAuthorizationParameter> object as a list of access rules.  
+
+All properties are optional, but at least one must exist
+
+
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| unit | <code>string</code> &#124; <code>function</code> | Unit that should match token |
+| permission | <code>string</code> &#124; <code>function</code> | Permission that should match token |
+| sub | <code>string</code> &#124; <code>function</code> | Subject that should match token |
+
+### AuthorizationMode{#AuthorizationMode}: <code>String</code>
+
+Type defintion of the authorization mode.  
+SERVICE_ADMIN_ENDPOINT - Authorization validates if you are a service admin and have a valid token. Either accessed or thrown out.  
+OPEN_ENDPOINT - Authorization validates if you have a valid token and lets you through to the open endpoint. Either accessed or thrown out.  
+
+Either SERVICE_ADMIN_ENDPOINT or OPEN_ENDPOINT
 
 
