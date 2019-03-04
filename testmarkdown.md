@@ -11,7 +11,7 @@ ServiceAuthorizationMiddleware
 
 | Param | Type | Description |
 | --- | --- | --- |
-| options | <code>Object</code> | **Required - **  |
+| options | <code>Object</code> | **Required -**  |
 | options.serviceTokenSignSecret | <code>string</code> | **Required** - Secret to validate token signature against |
 
 
