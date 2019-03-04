@@ -1,19 +1,22 @@
-# Roles
+
+# roles
+
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/roles.get" %}
 {% api-method-summary %}
-/roles.get
+  /roles.get
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Get role by id
+  Get role by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
+
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="roleId" type="string" required="true" %}
-Role id
+  Role id
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -21,9 +24,8 @@ Role id
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Successful
+  Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "id": "Role id",
@@ -35,22 +37,18 @@ Successful
 }
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Bad Request
+  Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-Internal Server Error
+  Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -61,28 +59,20 @@ Internal Server Error
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/roles.list" %}
 {% api-method-summary %}
-/roles.list
+  /roles.list
 {% endapi-method-summary %}
 
 {% api-method-description %}
-List roles
+  List roles
 {% endapi-method-description %}
 
 {% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Successful
+  Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 [
   {
@@ -96,22 +86,18 @@ Successful
 ]
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Bad Request
+  Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-Internal Server Error
+  Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -122,22 +108,22 @@ Internal Server Error
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/roles.listMappedGroups" %}
 {% api-method-summary %}
-/roles.listMappedGroups
+  /roles.listMappedGroups
 {% endapi-method-summary %}
 
 {% api-method-description %}
-List all mapped groups by role id
+  List all mapped groups by role id
 {% endapi-method-description %}
 
 {% api-method-spec %}
+
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="roleId" type="string" required="true" %}
-Role id
+  Role id
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="organizationId" type="string" required="true" %}
-Organization id
+  Organization id
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -145,9 +131,8 @@ Organization id
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Successful
+  Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 [
   {
@@ -161,22 +146,18 @@ Successful
 ]
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Bad Request
+  Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-Internal Server Error
+  Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -187,30 +168,28 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/roles.assignToGroup" %}
 {% api-method-summary %}
-/roles.assignToGroup
+  /roles.assignToGroup
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Add group to role mapping
+  Add group to role mapping
 {% endapi-method-description %}
 
 {% api-method-spec %}
+
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="roleId" type="string" required="true" %}
-Role id
+  Role id
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="organizationId" type="string" required="true" %}
-Organization id
+  Organization id
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="group" type="string" required="true" %}
-Organization group name
+  Organization group name
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="unitId" type="string" required="true" %}
-Unit id
+  Unit id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -218,9 +197,8 @@ Unit id
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Successful
+  Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "roleId": "Role id",
@@ -232,22 +210,18 @@ Successful
 }
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Bad Request
+  Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-Internal Server Error
+  Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -258,30 +232,28 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/roles.create" %}
 {% api-method-summary %}
-/roles.create
+  /roles.create
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create role
+  Create role
 {% endapi-method-description %}
 
 {% api-method-spec %}
+
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="serviceId" type="string" required="true" %}
-Service id
+  Service id
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="name" type="string" required="true" %}
-Service role name
+  Service role name
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="parentRoleId" type="string" required="true" %}
-Role id
+  Role id
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="description" type="string" required="true" %}
-Description of speicific part xxx
+  Description of speicific part xxx
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -289,9 +261,8 @@ Description of speicific part xxx
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Successful
+  Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "id": "Role id",
@@ -304,22 +275,18 @@ Successful
 }
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Bad Request
+  Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-Internal Server Error
+  Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -330,18 +297,19 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/roles.delete" %}
 {% api-method-summary %}
-/roles.delete
+  /roles.delete
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Delete role by id
+  Delete role by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
+
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="roleId" type="string" required="true" %}
-Role id
+  Role id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -349,29 +317,24 @@ Role id
 {% api-method-response %}
 {% api-method-response-example httpCode=204 %}
 {% api-method-response-example-description %}
-No Content
+  No Content
 {% endapi-method-response-example-description %}
-
 ```javascript
 ""
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Bad Request
+  Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-Internal Server Error
+  Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -382,22 +345,22 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/roles.mapPermission" %}
 {% api-method-summary %}
-/roles.mapPermission
+  /roles.mapPermission
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Map permissision to role
+  Map permissision to role
 {% endapi-method-description %}
 
 {% api-method-spec %}
+
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="roleId" type="string" required="true" %}
-Role id
+  Role id
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="permissionId" type="string" required="true" %}
-Permission id
+  Permission id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -405,9 +368,8 @@ Permission id
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Successful
+  Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "roleId": "Role id",
@@ -415,22 +377,18 @@ Successful
 }
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Bad Request
+  Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-Internal Server Error
+  Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -441,22 +399,22 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/roles.setDescription" %}
 {% api-method-summary %}
-/roles.setDescription
+  /roles.setDescription
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Set role description by id
+  Set role description by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
+
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="roleId" type="string" required="true" %}
-Role id
+  Role id
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="description" type="string" required="true" %}
-Description of speicific part xxx
+  Description of speicific part xxx
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -464,31 +422,26 @@ Description of speicific part xxx
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Successful
+  Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "description": "Description of speicific part xxx"
 }
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Bad Request
+  Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-Internal Server Error
+  Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -499,22 +452,22 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/roles.setName" %}
 {% api-method-summary %}
-/roles.setName
+  /roles.setName
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Set role name by id
+  Set role name by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
+
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="roleId" type="string" required="true" %}
-Role id
+  Role id
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="name" type="string" required="true" %}
-Service role name
+  Service role name
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -522,9 +475,8 @@ Service role name
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Successful
+  Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "name": {
@@ -533,22 +485,18 @@ Successful
 }
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Bad Request
+  Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-Internal Server Error
+  Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -559,22 +507,22 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/roles.setParentRole" %}
 {% api-method-summary %}
-/roles.setParentRole
+  /roles.setParentRole
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Set role parent role by id
+  Set role parent role by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
+
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="roleId" type="string" required="true" %}
-Role id
+  Role id
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="parentRoleId" type="string" required="true" %}
-Role id
+  Role id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -582,31 +530,26 @@ Role id
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Successful
+  Successful
 {% endapi-method-response-example-description %}
-
 ```javascript
 {
   "parentRoleId": "Role id"
 }
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Bad Request
+  Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-Internal Server Error
+  Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -617,30 +560,28 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/roles.unassignFromGroup" %}
 {% api-method-summary %}
-/roles.unassignFromGroup
+  /roles.unassignFromGroup
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Delete group to role mapping
+  Delete group to role mapping
 {% endapi-method-description %}
 
 {% api-method-spec %}
+
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="roleId" type="string" required="true" %}
-Role id
+  Role id
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="organizationId" type="string" required="true" %}
-Organization id
+  Organization id
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="group" type="string" required="true" %}
-Organization group name
+  Organization group name
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="unitId" type="string" required="true" %}
-Unit id
+  Unit id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -648,29 +589,24 @@ Unit id
 {% api-method-response %}
 {% api-method-response-example httpCode=204 %}
 {% api-method-response-example-description %}
-No Content
+  No Content
 {% endapi-method-response-example-description %}
-
 ```javascript
 ""
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Bad Request
+  Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-Internal Server Error
+  Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -681,22 +617,22 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/roles.unmapPermission" %}
 {% api-method-summary %}
-/roles.unmapPermission
+  /roles.unmapPermission
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Unmap permission from role
+  Unmap permission from role
 {% endapi-method-description %}
 
 {% api-method-spec %}
+
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="roleId" type="string" required="true" %}
-Role id
+  Role id
 {% endapi-method-parameter %}
-
 {% api-method-parameter name="permissionId" type="string" required="true" %}
-Permission id
+  Permission id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -704,29 +640,24 @@ Permission id
 {% api-method-response %}
 {% api-method-response-example httpCode=204 %}
 {% api-method-response-example-description %}
-No Content
+  No Content
 {% endapi-method-response-example-description %}
-
 ```javascript
 ""
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Bad Request
+  Bad Request
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-Internal Server Error
+  Internal Server Error
 {% endapi-method-response-example-description %}
-
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -734,4 +665,3 @@ Internal Server Error
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
