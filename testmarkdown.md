@@ -1,71 +1,86 @@
-## ExpressMiddleware <a id="ExpressMiddleware"></a>
+## ExpressMiddleware{#ExpressMiddleware}
 
-### ServiceAuthorizationMiddleware <a id="ServiceAuthorizationMiddleware"></a>
+
+### ServiceAuthorizationMiddleware{#ServiceAuthorizationMiddleware}
 
 ServiceAuthorizationMiddleware
 
-#### new ServiceAuthorizationMiddleware\(options\) <a id="ServiceAuthorizationMiddleware"></a>
+
+#### new ServiceAuthorizationMiddleware(options) {#ServiceAuthorizationMiddleware}
+
 
 | Param | Type | Description |
-| :--- | :--- | :--- |
-| options | `Object` | **Required** - |
-| options.serviceTokenSignSecret | `string` | **Required** - Secret to validate token signature against |
+| --- | --- | --- |
+| options | <code>Object</code> | **Required** -  |
+| options.serviceTokenSignSecret | <code>string</code> | **Required** - Secret to validate token signature against |
 
-#### authorize\(authParams\) <a id="authorize"></a>
+
+#### authorize(authParams) {#authorize}
 
 Extract and authorize token using the provided auth params
 
-| Param | Type | Description |
-| :--- | :--- | :--- |
-| authParams | `FullAuthorizationParameters` \| `AuthorizationMode` | **Required** - Authorization parameters to pass to |
 
-#### errorHandler\(\[err\], req, res, next\) 
+| Param | Type | Description |
+| --- | --- | --- |
+| authParams | <code>FullAuthorizationParameters</code> &#124; <code>AuthorizationMode</code> | **Required** - Authorization parameters to pass to |
+
+
+#### errorHandler([err], req, res, next) {#errorHandler}
 
 Error handler for errors thrown by ServiceAuthorizationMiddleware
 
-Will handle telling IMSG to redirect unauthorized requests, but will pass on any other errors to next\(\)
+Will handle telling IMSG to redirect unauthorized requests, but will pass on
+any other errors to next()
+
 
 | Param | Type | Description |
-| :--- | :--- | :--- |
-| err | `Object` | Express err |
-| req | `Object` | **Required** - Express req |
-| res | `Object` | **Required** - Express res |
-| next | `function` | **Required** - Express next |
+| --- | --- | --- |
+| err | <code>Object</code> | Express err |
+| req | <code>Object</code> | **Required** - Express req |
+| res | <code>Object</code> | **Required** - Express res |
+| next | <code>function</code> | **Required** - Express next |
 
-#### FullAuthorizationParameters - Typedef definition <a id="FullAuthorizationParameters"></a>
+
+---
+### FullAuthorizationParameters - Typedef definition{#FullAuthorizationParameters}: <code>Object</code>
 
 The type definition of the full auhtorization object with all parameters.  
 Passed to the authorize function.
 
+
 **Properties**
 
 | Name | Type | Description |
-| :--- | :--- | :--- |
-| onPreAuth | `function` | Function to run before authorize is called |
-| org | `string` \| `function` \| `Boolean` | **Required** - Organiztion to authorize against |
-| accessRules | `Array.<AccessRule>` | Optional access rules to authorize against |
-| suppressLoginTrigger | `Boolean` | If true, do not redirect failed authorization to login |
+| --- | --- | --- |
+| onPreAuth | <code>function</code> | Function to run before authorize is called |
+| org | <code>string</code> &#124; <code>function</code> &#124; <code>Boolean</code> | **Required** - Organiztion to authorize against |
+| accessRules | <code>Array.&lt;AccessRule&gt;</code> | Optional access rules to authorize against |
+| suppressLoginTrigger | <code>Boolean</code> | If true, do not redirect failed authorization to login |
 
-#### AccessRule - Typedef definition <a id="AccessRule"></a>
+---
+### AccessRule - Typedef definition{#AccessRule}: <code>Object</code>
 
 The type definition of the access rule.  
-Passed to the authorize function within the  object as a list of access rules.
+Passed to the authorize function within the <FullAuthorizationParameter> object as a list of access rules.  
 
 All properties are optional, but at least one must exist
 
+
 **Properties**
 
 | Name | Type | Description |
-| :--- | :--- | :--- |
-| unit | `string` \| `function` | Unit that should match token |
-| permission | `string` \| `function` | Permission that should match token |
-| sub | `string` \| `function` | Subject that should match token |
+| --- | --- | --- |
+| unit | <code>string</code> &#124; <code>function</code> | Unit that should match token |
+| permission | <code>string</code> &#124; <code>function</code> | Permission that should match token |
+| sub | <code>string</code> &#124; <code>function</code> | Subject that should match token |
 
-#### AuthorizationMode - Typedef definition <a id="AuthorizationMode"></a>
+---
+### AuthorizationMode - Typedef definition{#AuthorizationMode}: <code>String</code>
 
 Type defintion of the authorization mode.  
-SERVICE\_ADMIN\_ENDPOINT - Authorization validates if you are a service admin and have a valid token. Either accessed or thrown out.  
-OPEN\_ENDPOINT - Authorization validates if you have a valid token and lets you through to the open endpoint. Either accessed or thrown out.
+SERVICE_ADMIN_ENDPOINT - Authorization validates if you are a service admin and have a valid token. Either accessed or thrown out.  
+OPEN_ENDPOINT - Authorization validates if you have a valid token and lets you through to the open endpoint. Either accessed or thrown out.  
 
-Either SERVICE\_ADMIN\_ENDPOINT or OPEN\_ENDPOINT
+Either SERVICE_ADMIN_ENDPOINT or OPEN_ENDPOINT
+
 
