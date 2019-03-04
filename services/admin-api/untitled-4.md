@@ -1,22 +1,19 @@
-
-# services
-
+# Services
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/services.get" %}
 {% api-method-summary %}
-  /services.get
+/services.get
 {% endapi-method-summary %}
 
 {% api-method-description %}
-  Get service by id
+Get service by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
-
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="serviceId" type="string" required="true" %}
-  Service id
+Service id
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -26,6 +23,7 @@
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "id": "Service id",
@@ -36,18 +34,22 @@ Successful
 }
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -58,20 +60,28 @@ Internal Server Error
 
 {% api-method method="get" host="https://admin-api.infomaker.io" path="/v1/services.list" %}
 {% api-method-summary %}
-  /services.list
+/services.list
 {% endapi-method-summary %}
 
 {% api-method-description %}
-  List services
+List services
 {% endapi-method-description %}
 
 {% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 [
   {
@@ -84,18 +94,22 @@ Successful
 ]
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -106,22 +120,22 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/services.create" %}
 {% api-method-summary %}
-  /services.create
+/services.create
 {% endapi-method-summary %}
 
 {% api-method-description %}
-  Create service
+Create service
 {% endapi-method-description %}
 
 {% api-method-spec %}
-
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="name" type="string" required="true" %}
-  Infomaker service name
+Infomaker service name
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="description" type="string" required="true" %}
-  Description of speicific part xxx
+Description of speicific part xxx
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -131,6 +145,7 @@ Internal Server Error
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "id": "Service id",
@@ -141,18 +156,22 @@ Successful
 }
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -163,19 +182,18 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/services.delete" %}
 {% api-method-summary %}
-  /services.delete
+/services.delete
 {% endapi-method-summary %}
 
 {% api-method-description %}
-  Delete service by id
+Delete service by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
-
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="serviceId" type="string" required="true" %}
-  Service id
+Service id
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -185,22 +203,27 @@ Internal Server Error
 {% api-method-response-example-description %}
 No Content
 {% endapi-method-response-example-description %}
+
 ```javascript
 ""
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -211,22 +234,22 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/services.setDescription" %}
 {% api-method-summary %}
-  /services.setDescription
+/services.setDescription
 {% endapi-method-summary %}
 
 {% api-method-description %}
-  Set service description by id
+Set service description by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
-
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="serviceId" type="string" required="true" %}
-  Service id
+Service id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="description" type="string" required="true" %}
-  Description of speicific part xxx
+Description of speicific part xxx
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -236,24 +259,29 @@ Internal Server Error
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "description": "Description of speicific part xxx"
 }
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
@@ -264,22 +292,22 @@ Internal Server Error
 
 {% api-method method="post" host="https://admin-api.infomaker.io" path="/v1/services.setName" %}
 {% api-method-summary %}
-  /services.setName
+/services.setName
 {% endapi-method-summary %}
 
 {% api-method-description %}
-  Set service name by id
+Set service name by id
 {% endapi-method-description %}
 
 {% api-method-spec %}
-
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="serviceId" type="string" required="true" %}
-  Service id
+Service id
 {% endapi-method-parameter %}
+
 {% api-method-parameter name="name" type="string" required="true" %}
-  Infomaker service name
+Infomaker service name
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -289,6 +317,7 @@ Internal Server Error
 {% api-method-response-example-description %}
 Successful
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
   "name": {
@@ -297,18 +326,22 @@ Successful
 }
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
 Bad Request
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.BadRequestError"
 ```
 {% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
 Internal Server Error
 {% endapi-method-response-example-description %}
+
 ```javascript
 "errors.api.InternalServerError"
 ```
